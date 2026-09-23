@@ -157,7 +157,7 @@ Every figure was computed by <code>tools/figures.py</code> in
 {E(PAPER['where'])}, used under <a href="{PAPER['licence_url']}" rel="noopener">{E(PAPER['licence'])}</a>
 — quoted from, not reproduced.</p>
 {fleet.row_html(SELF, roster=FLEET)}
-{fleet.support_html(roster=FLEET)}
+{fleet.support_html(self_id="exceptional-magic", roster=FLEET)}
 {fleet.maker_html(roster=FLEET)}
 </div></footer>{js}
 <script src="{BASE}js/nav.js" defer></script>
