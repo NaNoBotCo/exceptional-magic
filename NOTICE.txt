@@ -1,0 +1,25 @@
+Exceptional Magic — what is in this repository, and under what terms.
+
+CODE — tools/, js/, tests/, publish.sh
+    SPDX-License-Identifier: MIT — see LICENSE-CODE.
+
+TEXT AND FIGURES — the pages in docs/, the SVGs and JPGs in docs/img/, README.md
+    SPDX-License-Identifier: CC-BY-4.0 — see LICENSE. Credit line: "Nan · hongdam.net · CC BY 4.0",
+    with a link to https://nanobotco.github.io/exceptional-magic/ .
+    Every figure was computed by tools/figures.py from tools/algebra.py and tools/roots.py.
+    None is traced from, or a copy of, anyone else's image.
+
+THE PAPER THIS SITE READS
+    A. Garrett Lisi, "Division Algebras, Triality, and Exceptional Magic",
+    arXiv:2609.12112v1 [math-ph], 10 September 2026 — https://arxiv.org/abs/2609.12112
+    Licence: CC BY-NC-ND 4.0. That licence permits no derivative works, and this site is not
+    one: no text, equation image, table image or figure from the paper is reproduced. The
+    mathematics — division algebras, triality, the magic square, the exceptional root
+    systems — is recomputed here from the definitions. The multiplication tables in
+    tools/algebra.py are the standard ones, transcribed from the paper's §2 and then verified
+    against the algebraic laws they must satisfy. The paper is cited by section wherever it
+    is the reason a topic appears, and its 34 references are transcribed with their links on
+    the credit page.
+
+ROSTER — data/fleet.json, tools/fleet.py
+    The publisher's list of sites, copied from the index repository.

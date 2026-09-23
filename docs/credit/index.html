@@ -1,0 +1,235 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Credit — whose work this is</title>
+<meta name="description" content="The paper this site reads, its thirty-four references with links, and what was computed here rather than copied.">
+<link rel="canonical" href="https://nanobotco.github.io/exceptional-magic/credit/">
+<meta property="og:title" content="Credit — whose work this is">
+<meta property="og:description" content="The paper this site reads, its thirty-four references with links, and what was computed here rather than copied.">
+<meta property="og:image" content="https://nanobotco.github.io/exceptional-magic/img/card.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/exceptional-magic/icon.svg" type="image/svg+xml">
+<style>
+:root{
+ --bg:#0a0a10;--bg2:#0f0f18;--panel:#14141f;--ink:#f2ede3;--mute:#9d9689;--line:#2c2c3a;
+ --chip:#1b1b28;--c0:#ffc247;--c1:#5fd3c6;--c2:#ff7ab6;--violet:#b79cff;--focus:#ffc247;
+ --display:"Avenir Next Condensed","Arial Narrow",Impact,system-ui,sans-serif;
+ --body:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+ color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{font-size:19px;scroll-behavior:smooth;background:var(--bg)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.62;
+ -webkit-text-size-adjust:100%}
+a{color:var(--c0);text-decoration-thickness:.08em;text-underline-offset:.18em}
+a:hover{color:#ffd98a}
+a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,input:focus-visible{
+ outline:3px solid var(--focus);outline-offset:2px;border-radius:5px}
+img,canvas,svg{max-width:100%}img{height:auto}
+.sr{position:absolute;left:-999px;top:0;background:var(--c0);color:#000;padding:.4rem .8rem;z-index:99}
+.sr:focus{left:.5rem;top:.5rem}
+
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30;
+ background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px)}
+header.top .in{max-width:72rem;margin:0 auto;padding:.5rem 1rem;display:flex;gap:.4rem 1.1rem;
+ align-items:center;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:.03em;
+ text-transform:uppercase;text-decoration:none;color:var(--ink);white-space:nowrap;display:flex;
+ align-items:center;gap:.5rem}
+.brand i{width:.85rem;height:.85rem;border-radius:50%;background:var(--c0);display:inline-block;
+ box-shadow:0 0 0 3px rgba(255,194,71,.18),6px -6px 0 -2px var(--c1),-6px 6px 0 -2px var(--c2)}
+header.top nav{display:flex;gap:.1rem .8rem;flex-wrap:wrap;font-size:.72rem;text-transform:uppercase;
+ letter-spacing:.08em;font-weight:700}
+header.top nav a{text-decoration:none;color:var(--mute);padding:.15rem 0}
+header.top nav a:hover,header.top nav a[aria-current]{color:var(--ink);box-shadow:inset 0 -3px 0 var(--c0)}
+main{max-width:72rem;margin:0 auto;padding:1rem 1rem 5rem}
+footer.bot{border-top:1px solid var(--line);margin-top:3rem;background:var(--bg2)}
+footer.bot .in{max-width:72rem;margin:0 auto;padding:1.4rem 1rem 3rem;font-size:.8rem;color:var(--mute)}
+footer.bot a{color:var(--mute)}footer.bot p{max-width:none}
+.fleet{margin:.6rem 0 0;line-height:1.9}.fleet a{margin-right:.55rem;white-space:nowrap}
+.support{margin:.45rem 0 0}.support a{margin-right:.5rem}
+
+h1{font-family:var(--display);font-size:clamp(2.4rem,7.5vw,5rem);line-height:.94;margin:.3rem 0 .4rem;
+ font-weight:800;letter-spacing:-.005em;text-transform:uppercase}
+h1 .kind{display:block;font-size:clamp(.6rem,1.5vw,.72rem);color:var(--c0);letter-spacing:.34em;
+ margin-bottom:.55rem;font-weight:800}
+h2{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,2rem);margin:2.6rem 0 .6rem;font-weight:800;
+ text-transform:uppercase;border-bottom:2px solid var(--line);padding-bottom:.25rem}
+h2 small{font-family:var(--body);font-size:.55em;color:var(--mute);text-transform:none;
+ letter-spacing:0;font-weight:400;margin-left:.6rem}
+h3{font-family:var(--display);font-size:1.2rem;margin:1.7rem 0 .3rem;font-weight:800;text-transform:uppercase}
+.lede{font-size:clamp(1.12rem,2.4vw,1.35rem);max-width:44rem;margin:.5rem 0 1.1rem}
+.mute{color:var(--mute)}.small{font-size:.82rem}
+p{margin:.65rem 0;max-width:44rem}
+.prose p,.prose ul,.prose ol{max-width:44rem}
+.prose li{margin:.35rem 0}
+.prose strong{color:var(--c0);font-weight:700}
+blockquote{margin:1rem 0;padding:.6rem 0 .6rem 1rem;border-left:3px solid var(--c1);color:var(--ink);
+ max-width:44rem;font-style:normal}
+blockquote cite{display:block;margin-top:.4rem;color:var(--mute);font-size:.82rem;font-style:normal}
+
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin:1rem 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem;
+ text-decoration:none;color:var(--ink);display:block}
+a.card:hover{border-color:var(--c0)}
+.card h3{margin:.1rem 0 .3rem}
+.card p{margin:.2rem 0;font-size:.88rem;color:var(--mute)}
+.fig{margin:1.6rem 0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:.7rem}
+.fig img{display:block;margin:0 auto;border-radius:6px}
+.fig figcaption{color:var(--mute);font-size:.82rem;margin:.6rem .2rem 0;max-width:46rem}
+.fig.plain{background:none;border:none;padding:0}
+.hero{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:.6rem 0 1.4rem}
+.hero img{display:block;width:100%}
+
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.88rem}
+th,td{text-align:left;padding:.42rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mute);font-weight:700;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+.wrap{overflow-x:auto}
+code,kbd{font-family:var(--mono);font-size:.86em;background:var(--chip);padding:.1rem .3rem;border-radius:4px}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem 1rem;
+ overflow-x:auto;font-size:.82rem}
+pre code{background:none;padding:0}
+.eq{font-family:var(--mono);background:var(--panel);border-left:3px solid var(--c0);padding:.7rem 1rem;
+ margin:1rem 0;overflow-x:auto;font-size:.92rem;max-width:44rem}
+.eq b{color:var(--c0);font-weight:600}
+.cite{font-size:.78em;color:var(--c1);text-decoration:none;border-bottom:1px dotted var(--c1);
+ white-space:nowrap;margin-left:.2em}
+.cite:hover{color:var(--c1)}
+.tag{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:999px;
+ padding:.1rem .6rem;font-size:.72rem;color:var(--mute);margin:0 .25rem .3rem 0}
+.tag.c0{border-color:var(--c0);color:var(--c0)}
+.tag.c1{border-color:var(--c1);color:var(--c1)}
+.tag.c2{border-color:var(--c2);color:var(--c2)}
+
+.tool{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1rem;margin:1.4rem 0}
+.tool h3{margin-top:0}
+.tool .row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.5rem 0}
+.tool label{font-size:.8rem;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+button,select,input[type=text]{font:inherit;font-size:.9rem;background:var(--chip);color:var(--ink);
+ border:1px solid var(--line);border-radius:7px;padding:.35rem .7rem;cursor:pointer}
+button:hover,select:hover{border-color:var(--c0)}
+button.go{background:var(--c0);color:#0a0a10;border-color:var(--c0);font-weight:700}
+.out{font-family:var(--mono);font-size:.9rem;background:#0b0b12;border:1px solid var(--line);
+ border-radius:8px;padding:.7rem .9rem;margin:.6rem 0 0;overflow-x:auto;line-height:1.8}
+.out .k{color:var(--mute)}
+.out .v{color:var(--c1)}
+.out .bad{color:var(--c2)}
+.out .good{color:var(--c0)}
+.units{display:flex;gap:.3rem;flex-wrap:wrap}
+.units button{min-width:2.9rem;text-align:center;font-family:var(--mono)}
+.units button[aria-pressed=true]{background:var(--c0);color:#0a0a10;border-color:var(--c0);font-weight:700}
+.units button.b[aria-pressed=true]{background:var(--c1);border-color:var(--c1)}
+canvas{display:block;margin:0 auto;max-width:100%;height:auto;touch-action:pan-y}
+
+.square{border-collapse:separate;border-spacing:3px;font-size:.78rem;width:auto;min-width:100%}
+.square td,.square th{border:none;padding:.4rem .3rem;text-align:center;border-radius:6px}
+.square td{background:var(--panel);border:1px solid var(--line)}
+.square td b{display:block;font-size:1.02rem;color:var(--ink)}
+.square td span{color:var(--mute);font-family:var(--mono);font-size:.72rem}
+.square td.big{border-color:var(--c0)}
+.square td.big b{color:var(--c0)}
+.square td.e7{border-color:var(--c1)}.square td.e7 b{color:var(--c1)}
+.square td.e6{border-color:var(--c2)}.square td.e6 b{color:var(--c2)}
+.square td.f4{border-color:var(--violet)}.square td.f4 b{color:var(--violet)}
+.square th{color:var(--mute)}
+
+ul.ticks{list-style:none;padding-left:0}
+ul.ticks li{padding-left:1.4rem;position:relative}
+ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--c1);font-weight:700}
+ul.checks{list-style:none;padding-left:0;font-family:var(--mono);font-size:.78rem;columns:2;
+ column-gap:2rem;max-width:none}
+ul.checks li{break-inside:avoid;color:var(--mute);margin:.15rem 0}
+ul.checks li b{color:var(--c1);font-weight:400}
+@media (max-width:48rem){ul.checks{columns:1}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;font-size:.86rem;max-width:44rem}
+.kv dt{color:var(--mute)}.kv dd{margin:0}
+.note{border:1px solid var(--line);border-left:3px solid var(--c2);background:var(--bg2);
+ border-radius:0 8px 8px 0;padding:.7rem 1rem;margin:1.2rem 0;font-size:.9rem;max-width:46rem}
+.note b{color:var(--c2)}
+.credit{border:1px solid var(--c1);border-radius:10px;padding:1rem 1.2rem;margin:1.6rem 0;
+ background:color-mix(in srgb,var(--c1) 6%,var(--panel));max-width:46rem}
+.credit a{color:var(--c1)}
+.credit h3{margin-top:0;color:var(--c1)}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.gallery a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+ padding:.6rem;text-decoration:none;color:var(--mute);font-size:.8rem}
+.gallery a:hover{border-color:var(--c0)}
+.gallery img{border-radius:6px;display:block;width:100%;background:var(--bg)}
+</style></head>
+<body data-base="/exceptional-magic/">
+<a class="sr" href="#main">Skip to the page</a>
+<header class="top"><div class="in">
+<a class="brand" href="/exceptional-magic/"><i></i>Exceptional <b>Magic</b></a>
+<nav aria-label="Sections"><a href="/exceptional-magic/numbers/">Numbers</a><a href="/exceptional-magic/wheel/">Wheel</a><a href="/exceptional-magic/triality/">Triality</a><a href="/exceptional-magic/square/">Square</a><a href="/exceptional-magic/e8/">E8</a><a href="/exceptional-magic/physics/">Physics</a><a href="/exceptional-magic/checks/">Checks</a><a href="/exceptional-magic/gallery/">Gallery</a><a href="/exceptional-magic/credit/" aria-current="page">Credit</a></nav></div></header>
+<main id="main"><h1><span class="kind">Whose work this is</span>Credit</h1>
+<p class="lede">This site exists because of one paper, and that paper exists because of
+thirty-four others. All of them are below, with links.</p>
+
+<div class="credit"><h3>The paper this reads</h3><p><b>A. Garrett Lisi</b>, <a href="https://arxiv.org/abs/2609.12112" rel="noopener"><i>Division Algebras, Triality, and Exceptional Magic</i></a>, arXiv:2609.12112v1 [math-ph], 10 September 2026. <a href="https://arxiv.org/html/2609.12112v1" rel="noopener">HTML</a> · <a href="https://arxiv.org/pdf/2609.12112v1" rel="noopener">PDF</a> · <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener">CC BY-NC-ND 4.0</a>.</p><p class="small">That licence allows no derivatives, so nothing here is a copy of it. The mathematics is nobody's property: every table, picture and number on this site is computed in this repository from the definitions, and the paper is named wherever it is the reason a thing is here. Read it; it is better than this page.</p></div>
+
+<h2>What was done here, and what was not</h2>
+<div class="prose">
+<ul class="ticks">
+<li>The mathematics is not mine and not the paper's — it runs from Hamilton and Graves in the
+1840s through Cartan, Freudenthal, Tits and Vinberg.</li>
+<li>The paper is the reason this site picks these topics, in this order, with these
+decompositions. Where a page follows its §, the page says so.</li>
+<li>Every table, figure, number and check on this site was computed in this repository from the
+definitions. The multiplication tables in <code>tools/algebra.py</code> are transcribed from the
+paper's §2, which prints the standard ones, and are then verified against the laws they have to
+satisfy.</li>
+<li>No text, equation image or figure from the paper is reproduced here. Its licence is
+CC BY-NC-ND 4.0, which permits no derivatives, and this site is not one.</li>
+<li>Where physics is proposal rather than result, the proposer is named and the objections are
+on the same page.</li>
+</ul>
+</div>
+
+<h2>The paper's references</h2>
+<p class="small mute">Lisi's own list, transcribed with its links. The right-hand column is this
+site's note on what each one is here for.</p>
+<div class="wrap"><table>
+<thead><tr><th>who</th><th class="n">year</th><th>what</th><th>why it is on the list</th></tr></thead>
+<tbody><tr><td>J. Baez</td><td class='n'>2002</td><td><a href="https://arxiv.org/abs/math/0105155" rel="noopener">The Octonions</a><br><span class="mute small">Bull. Amer. Math. Soc. 39</span></td><td class='small mute'>The standing introduction to the octonions and the magic square. Lisi&#x27;s paper says it follows this one, in more painful detail.</td></tr><tr><td>C. H. Barton and A. Sudbery</td><td class='n'>2003</td><td><a href="https://arxiv.org/abs/math/0203010" rel="noopener">Magic squares and matrix models of Lie algebras</a><br><span class="mute small">Adv. Math. 180, 596–647</span></td><td class='small mute'>Where the magic square gets its matrix models.</td></tr><tr><td>L. Boyle and S. Farnsworth</td><td class='n'>2020</td><td><a href="https://arxiv.org/abs/1910.11888" rel="noopener">The standard model, the Pati-Salam model, and &#x27;Jordan geometry&#x27;</a><br><span class="mute small">New J. Phys. 22</span></td><td class='small mute'>Another route from the exceptional algebras into particle physics.</td></tr><tr><td>D. Chester, A. Marrani, D. Corradetti, R. Aschheim and K. Irwin</td><td class='n'>2023</td><td><a href="https://arxiv.org/abs/2303.11334" rel="noopener">Dixon-Rosenfeld lines and the standard model</a><br><span class="mute small">Eur. Phys. J. C 83 (849)</span></td><td class='small mute'>Division algebra lines and the standard model.</td></tr><tr><td>D. Chester, M. Rios and A. Marrani</td><td class='n'>2023</td><td><a href="https://arxiv.org/abs/2002.02391" rel="noopener">Beyond the standard model with six-dimensional spinors</a><br><span class="mute small">Particles 6 (1)</span></td><td class='small mute'>Six-dimensional spinors past the standard model.</td></tr><tr><td>J. Distler and R. Garibaldi</td><td class='n'>2010</td><td><a href="https://arxiv.org/abs/0905.2658" rel="noopener">There is no &#x27;theory of everything&#x27; inside E8</a><br><span class="mute small">Comm. Math. Phys. 298 (2), 419–436</span></td><td class='small mute'>The standing objection to fitting three generations in E8. The site&#x27;s physics page states it; Lisi §10 and §12 answer it.</td></tr><tr><td>G. M. Dixon</td><td class='n'>1994</td><td>Division algebras: octonions, quaternions, complex numbers, and the algebraic design of physics<br><span class="mute small">Kluwer</span></td><td class='small mute'>The book that made C ⊗ H ⊗ O a programme.</td></tr><tr><td>A. Douglas and J. Repka</td><td class='n'>2014</td><td><a href="https://arxiv.org/abs/1305.6946" rel="noopener">The gravigut algebra is not a subalgebra of E8, but E8 does contain an extended gravigut algebra</a><br><span class="mute small">SIGMA 10 (072)</span></td><td class='small mute'>What does and does not embed.</td></tr><tr><td>T. Dray and C. A. Manogue</td><td class='n'>2010</td><td><a href="https://arxiv.org/abs/0911.2253" rel="noopener">Octonions, E6, and particle physics</a><br><span class="mute small">J. Phys. Conf. Ser. 254 (012005)</span></td><td class='small mute'>E6 as the minimal exceptional home.</td></tr><tr><td>T. Dray and C. A. Manogue</td><td class='n'>2015</td><td>The geometry of the octonions<br><span class="mute small">World Scientific</span></td><td class='small mute'>Where su(3, D) as a way of writing these algebras comes from.</td></tr><tr><td>M. Dubois-Violette and I. Todorov</td><td class='n'>2018</td><td><a href="https://arxiv.org/abs/1808.08110" rel="noopener">Exceptional quantum geometry and particle physics II</a><br><span class="mute small">Nucl. Phys. B 938</span></td><td class='small mute'>The Jordan-algebra line of attack.</td></tr><tr><td>J. Evans</td><td class='n'>2009</td><td><a href="https://arxiv.org/abs/0910.1828" rel="noopener">Trialities and exceptional Lie algebras: deconstructing the magic square</a></td><td class='small mute'>Triality as the thing the magic square is made of — the paper&#x27;s §4 and §5 lean on it, and so does this site&#x27;s square.</td></tr><tr><td>H. Freudenthal</td><td class='n'>1964</td><td>Lie groups in the foundations of geometry<br><span class="mute small">Adv. Math. 1, 145–190</span></td><td class='small mute'>One of the two people the magic square is named for.</td></tr><tr><td>N. Furey and M. J. Hughes</td><td class='n'>2022</td><td><a href="https://arxiv.org/abs/2210.10126" rel="noopener">Division algebraic symmetry breaking</a><br><span class="mute small">Phys. Lett. B 831</span></td><td class='small mute'>Symmetry breaking done with division algebras.</td></tr><tr><td>N. Furey and M. J. Hughes</td><td class='n'>2025</td><td><a href="https://arxiv.org/abs/2409.17948" rel="noopener">Three generations and a trio of trialities</a><br><span class="mute small">Phys. Lett. B 865</span></td><td class='small mute'>Three generations from three trialities — the idea this site&#x27;s triality page is circling.</td></tr><tr><td>A. B. Gillard and N. G. Gresnigt</td><td class='n'>2019</td><td><a href="https://arxiv.org/abs/1904.03186" rel="noopener">Three fermion generations with two unbroken gauge symmetries from the complex sedenions</a><br><span class="mute small">Eur. Phys. J. C 79 (446)</span></td><td class='small mute'>Someone did go past eight, on purpose.</td></tr><tr><td>A. Kollross</td><td class='n'>2020</td><td><a href="https://arxiv.org/abs/1802.08075" rel="noopener">Octonions, triality, the exceptional Lie algebra F4, and polar actions on the Cayley hyperbolic plane</a><br><span class="mute small">Int. J. Math. 31 (07)</span></td><td class='small mute'>F4 and triality.</td></tr><tr><td>K. Krasnov</td><td class='n'>2022</td><td><a href="https://arxiv.org/abs/2104.01786" rel="noopener">Spin(11,3), particles, and octonions</a><br><span class="mute small">J. Math. Phys. 63 (031701)</span></td><td class='small mute'>A different signature, same octonions.</td></tr><tr><td>A. G. Lisi</td><td class='n'>2007</td><td><a href="https://arxiv.org/abs/0711.0770" rel="noopener">An exceptionally simple theory of everything</a></td><td class='small mute'>The 2007 E8 paper. The particle assignment on this site&#x27;s physics page is the one it made.</td></tr><tr><td>A. G. Lisi</td><td class='n'>2010</td><td><a href="https://arxiv.org/abs/1006.4908" rel="noopener">An explicit embedding of gravity and the standard model in E8</a><br><span class="mute small">Representation Theory and Mathematical Physics, Contemp. Math. 557</span></td><td class='small mute'>The embedding written out.</td></tr><tr><td>A. G. Lisi</td><td class='n'>2015</td><td><a href="https://arxiv.org/abs/1506.08073" rel="noopener">Lie group cosmology</a></td><td class='small mute'>The setting the 2026 paper puts its superconnection in.</td></tr><tr><td>A. G. Lisi</td><td class='n'>2024</td><td><a href="https://arxiv.org/abs/2407.02497" rel="noopener">C, P, T, and triality</a></td><td class='small mute'>The quaternion group inside the CPT group, and its extension by triality.</td></tr><tr><td>P. Lounesto</td><td class='n'>2001</td><td>Clifford algebras and spinors<br><span class="mute small">Cambridge, 2nd ed.</span></td><td class='small mute'>Reflections in a Clifford algebra, the standard account.</td></tr><tr><td>C. A. Manogue, T. Dray and R. A. Wilson</td><td class='n'>2022</td><td><a href="https://arxiv.org/abs/2204.05310" rel="noopener">Octions: an E8 description of the standard model</a><br><span class="mute small">J. Math. Phys. 63 (081703)</span></td><td class='small mute'>Another E8 description.</td></tr><tr><td>C. C. Perelman</td><td class='n'>2021</td><td>On Jordan-Clifford algebras, three fermion generations with Higgs fields and a SU(3)×SU(2)L×SU(2)R×U(1) model<br><span class="mute small">Adv. Appl. Clifford Algebr. 31 (53)</span></td><td class='small mute'>Three generations from a Jordan-Clifford algebra.</td></tr><tr><td>I. R. Porteous</td><td class='n'>1995</td><td>Clifford algebras and the classical groups<br><span class="mute small">Cambridge</span></td><td class='small mute'>The other standard reference for reflections.</td></tr><tr><td>P. Ramond</td><td class='n'>2003</td><td><a href="https://arxiv.org/abs/hep-th/0301050" rel="noopener">Exceptional groups and physics</a><br><span class="mute small">Groupe 24 plenary talk</span></td><td class='small mute'>The overview talk.</td></tr><tr><td>J. Tits</td><td class='n'>1966</td><td>Algèbres alternatives, algèbres de Jordan et algèbres de Lie exceptionnelles<br><span class="mute small">Nederl. Akad. Wetensch. Proc. Ser. A 69, 223–237</span></td><td class='small mute'>The other person the magic square is named for.</td></tr><tr><td>V. Vaibhav and T. P. Singh</td><td class='n'>2023</td><td><a href="https://arxiv.org/abs/2108.01858" rel="noopener">Left-right symmetric fermions and sterile neutrinos from complex split biquaternions and bioctonions</a><br><span class="mute small">Adv. Appl. Clifford Algebr. 33 (32)</span></td><td class='small mute'>Split algebras, put to work.</td></tr><tr><td>E. B. Vinberg</td><td class='n'>1976</td><td>The Weyl group of a graded Lie algebra<br><span class="mute small">Math. USSR-Izv. 10 (3)</span></td><td class='small mute'>Where the Θ-groups on this site&#x27;s E8 page come from. Russian original: Izv. Akad. Nauk SSSR Ser. Mat. 40 (3) (1976).</td></tr><tr><td>R. A. Wilson, T. Dray and C. A. Manogue</td><td class='n'>2023</td><td><a href="https://arxiv.org/abs/2204.04996" rel="noopener">An octonionic construction of E8 and the Lie algebra magic square</a><br><span class="mute small">Innov. Incidence Geom. 20</span></td><td class='small mute'>Building E8 out of octonions.</td></tr><tr><td>R. A. Wilson</td><td class='n'>2024</td><td><a href="https://arxiv.org/abs/2404.18938" rel="noopener">On possible embeddings of the standard model of particle physics and gravity in E8</a></td><td class='small mute'>What can be embedded, carefully.</td></tr><tr><td>P. Woit</td><td class='n'>2021</td><td><a href="https://arxiv.org/abs/2104.05099" rel="noopener">Euclidean twistor unification</a></td><td class='small mute'>Twistors meet the same incidence relation triality produces.</td></tr><tr><td>J. A. Wolf and A. Gray</td><td class='n'>1968</td><td>Homogeneous spaces defined by Lie group automorphisms. I<br><span class="mute small">J. Diff. Geom. 2, 77–114</span></td><td class='small mute'>3-symmetric spaces — what a triality automorphism leaves behind.</td></tr></tbody></table></div>
+
+<h2>This site</h2>
+<dl class="kv">
+<dt>Text and figures</dt><dd>Nan · hongdam.net · CC BY 4.0 —
+<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Credit line:
+<code>Nan · hongdam.net · CC BY 4.0</code>, with a link to https://nanobotco.github.io/exceptional-magic/.</dd>
+<dt>Code</dt><dd>MIT — <code>tools/</code>, <code>js/</code>, <code>tests/</code>.</dd>
+<dt>Source</dt><dd><a href="https://github.com/NaNoBotCo/exceptional-magic">github.com/NaNoBotCo/exceptional-magic</a></dd>
+<dt>Built</dt><dd>2026-09-23, from 139 passing checks</dd>
+</dl>
+
+<h2>Reading order, if you want the mathematics properly</h2>
+<div class="prose">
+<ol>
+<li><b>Baez, <i>The Octonions</i></b> (2002) — the place to start, and the paper Lisi's follows.
+<a class="cite" href="https://arxiv.org/abs/math/0105155" rel="noopener">J. Baez 2002</a></li>
+<li><b>Dray and Manogue, <i>The Geometry of the Octonions</i></b> (2015) — book length, worked
+out.</li>
+<li><b>Evans, <i>Trialities and exceptional Lie algebras</i></b> (2009) — the magic square taken
+apart. <a class="cite" href="https://arxiv.org/abs/0910.1828" rel="noopener">J. Evans 2009</a></li>
+<li><b>Lisi, <i>Division Algebras, Triality, and Exceptional Magic</i></b> (2026) — the one this
+site reads, and the most explicit of them about how to actually compute with triality.</li>
+</ol>
+</div>
+</main>
+<footer class="bot"><div class="in">
+<p><b>Exceptional Magic</b> — Eight ways to multiply, and where they get you: the octonions, triality, the magic square and E8, drawn from the arithmetic and told plain.</p>
+<p>Text and figures Nan · hongdam.net · CC BY 4.0. Code MIT. Built 2026-09-23.
+Every figure was computed by <code>tools/figures.py</code> in
+<a href="https://github.com/NaNoBotCo/exceptional-magic">the repository</a>; none is traced from anyone's drawing.</p>
+<p>Reading <a href="https://arxiv.org/abs/2609.12112" rel="noopener">A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic</a>,
+arXiv:2609.12112v1 [math-ph], 10 September 2026, used under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener">CC BY-NC-ND 4.0</a>
+— quoted from, not reproduced.</p>
+<div class="fleet">More from NaNoBotCo: <a href="https://motdang.net/" title="city directory for Chiang Mai and Chiang Rai">Mot Dang</a> · <a href="https://nanobotco.github.io/mae-hong-son-loop/" title="motorcycling the 600 km loop out of Chiang Mai — curves counted, air measured">The Mae Hong Son Loop</a> · <a href="https://motdang.net/muay-thai/" title="the eight limbs, the thirty named techniques, the ceremony, and every gym on the map">Muay Thai</a> · <a href="https://motdang.net/roads/" title="the square of 1296, four rings, and what each one did to the city — counted from the map">Roads of Chiang Mai</a> · <a href="https://wichaa.net/" title="Lanna manuscripts, the amulet market, and the traditions around them">wichaa</a> · <a href="https://nanobotco.github.io/hand-poke/" title="28 traditions of marking skin by hand — the leg-tattoo zone of Burma, the Shan States and Lanna, counted">Hand Poke</a> · <a href="https://nanobotco.github.io/black-holes/" title="black holes modelled and drawn from the equations — generators, the past, present and future, the legends">Black Holes, Drawn</a> · <a href="https://nanobotco.github.io/quantum-computing/" title="the history and theory of quantum computing in plain words, with demos; refreshed weekly">Quantum Computing, plainly</a> · <a href="https://nanobotco.github.io/goin-fast/" title="a dirt-simple explainer about speed — twenty measured speeds from the ground under the house to light, and what each one costs">Goin&#x27; Fast</a> · <a href="https://nanobotco.github.io/three-body/" title="the mathematics of the three-body problem in plain words, with the orbits found rather than copied">The Three-Body Problem</a> · <a href="https://nanobotco.github.io/amulet-atlas/" title="amulets, charms and talismans worldwide">Amulet Atlas</a> · <a href="https://nanobotco.github.io/carolina-barbecue/" title="barbecue in North and South Carolina">Carolina Barbecue</a> · <a href="https://nanobotco.github.io/buffalo-wings/" title="the American chicken wing">Wing Country</a> · <a href="https://nanobotco.github.io/pink-box/" title="the American mom-and-pop donut shop">Pink Box</a> · <a href="https://nanobotco.github.io/basque-tables/" title="Basque dining rooms of California, Nevada and Idaho">Basque Tables</a> · <a href="https://nanobotco.github.io/pinot-noir/" title="pinot noir: the vine, the regions, the cellars">Pinot Country</a> · <a href="https://nanobotco.github.io/care-abroad/" title="treatment across borders, with published prices and their dates">Care Abroad</a> · <a href="https://nanobotco.github.io/thairoots/" title="a root dictionary of Thai, with a word decomposer">Thai Roots</a> · <a href="https://nanobotco.github.io/index/" title="every corpus, site and repository, counted">The index</a> · <a href="https://nanobotco.github.io/uptake/" title="a field manual on publishing for machines that copy">Uptake</a> · <a href="https://nanobotco.github.io/" title="the portal">NaNoBotCo</a> · <a href="https://hakfarang.net/" title="เรื่องเงิน วีซ่า และชีวิตกับแฟนฝรั่ง">ฮักฝรั่ง</a> · <a href="https://offrampt.net/" title="turning crypto into spendable local money, Thailand first">Offrampt</a></div>
+<div class="support">Contact: Nan · <a href="mailto:nan@motdang.net">nan@motdang.net</a> · Sponsor: <a href="https://www.patreon.com/nanobotco" rel="noopener" target="_blank">Patreon</a> · <a href="https://ko-fi.com/defiantchiangmai" rel="noopener" target="_blank">Ko-fi</a></div>
+<div class="support maker">Made by <a href="https://hongdam.net/" rel="noopener">Hongdam</a>, Chiang Rai.</div>
+</div></footer>
+<script src="/exceptional-magic/js/nav.js" defer></script>
+</body></html>

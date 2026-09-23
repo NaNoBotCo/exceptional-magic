@@ -1,0 +1,1030 @@
+{
+ "survey": [
+  {
+   "algebra": "R",
+   "name": "the reals",
+   "dim": 1,
+   "trials": 2000,
+   "commutative": 2000,
+   "associative": 2000,
+   "alternative": 2000,
+   "composition": 2000
+  },
+  {
+   "algebra": "C",
+   "name": "the complex numbers",
+   "dim": 2,
+   "trials": 2000,
+   "commutative": 2000,
+   "associative": 2000,
+   "alternative": 2000,
+   "composition": 2000
+  },
+  {
+   "algebra": "H",
+   "name": "the quaternions",
+   "dim": 4,
+   "trials": 2000,
+   "commutative": 10,
+   "associative": 2000,
+   "alternative": 2000,
+   "composition": 2000
+  },
+  {
+   "algebra": "O",
+   "name": "the octonions",
+   "dim": 8,
+   "trials": 2000,
+   "commutative": 0,
+   "associative": 0,
+   "alternative": 2000,
+   "composition": 2000
+  },
+  {
+   "algebra": "S",
+   "name": "the sedenions",
+   "dim": 16,
+   "trials": 2000,
+   "commutative": 0,
+   "associative": 0,
+   "alternative": 0,
+   "composition": 0
+  }
+ ],
+ "zero_divisor_pairs": 84,
+ "zero_divisor_example": [
+  [
+   1,
+   10
+  ],
+  [
+   5,
+   14
+  ]
+ ],
+ "fano_lines": [
+  [
+   1,
+   2,
+   4
+  ],
+  [
+   1,
+   3,
+   7
+  ],
+  [
+   1,
+   5,
+   6
+  ],
+  [
+   2,
+   3,
+   5
+  ],
+  [
+   2,
+   6,
+   7
+  ],
+  [
+   3,
+   4,
+   6
+  ],
+  [
+   4,
+   5,
+   7
+  ]
+ ],
+ "fano_labelling_ok": true,
+ "systems": {
+  "G2": {
+   "roots": 12,
+   "rank": 2,
+   "dim": 14,
+   "h": 6,
+   "rings": [
+    [
+     1.0,
+     6
+    ],
+    [
+     1.732051,
+     6
+    ]
+   ]
+  },
+  "D4": {
+   "roots": 24,
+   "rank": 4,
+   "dim": 28,
+   "h": 6,
+   "rings": [
+    [
+     0.816497,
+     18
+    ],
+    [
+     1.414214,
+     6
+    ]
+   ]
+  },
+  "F4": {
+   "roots": 48,
+   "rank": 4,
+   "dim": 52,
+   "h": 12,
+   "rings": [
+    [
+     0.459701,
+     12
+    ],
+    [
+     0.650115,
+     12
+    ],
+    [
+     0.888074,
+     12
+    ],
+    [
+     1.255926,
+     12
+    ]
+   ]
+  },
+  "E6": {
+   "roots": 72,
+   "rank": 6,
+   "dim": 78,
+   "h": 12,
+   "rings": [
+    [
+     0.459701,
+     24
+    ],
+    [
+     0.650115,
+     12
+    ],
+    [
+     0.888074,
+     24
+    ],
+    [
+     1.255926,
+     12
+    ]
+   ]
+  },
+  "E7": {
+   "roots": 126,
+   "rank": 7,
+   "dim": 133,
+   "h": 18,
+   "rings": [
+    [
+     0.32246,
+     18
+    ],
+    [
+     0.414546,
+     18
+    ],
+    [
+     0.606026,
+     18
+    ],
+    [
+     0.635122,
+     18
+    ],
+    [
+     0.816497,
+     18
+    ],
+    [
+     0.928486,
+     18
+    ],
+    [
+     1.193638,
+     18
+    ]
+   ]
+  },
+  "E8": {
+   "roots": 240,
+   "rank": 8,
+   "dim": 248,
+   "h": 30,
+   "rings": [
+    [
+     0.238235,
+     30
+    ],
+    [
+     0.385473,
+     30
+    ],
+    [
+     0.473861,
+     30
+    ],
+    [
+     0.572925,
+     30
+    ],
+    [
+     0.704294,
+     30
+    ],
+    [
+     0.766723,
+     30
+    ],
+    [
+     0.927011,
+     30
+    ],
+    [
+     1.139572,
+     30
+    ]
+   ]
+  }
+ },
+ "e8_z3": {
+  "counts": [
+   84,
+   78,
+   78
+  ],
+  "root_sums_checked": 13440,
+  "violations": 0,
+  "g0_dim": 92,
+  "g0_rank": 7
+ },
+ "e8_two_grading": {
+  "so16": 120,
+  "spinor": 128
+ },
+ "d4_triality_checks": {
+  "orthogonal": true,
+  "order3": true,
+  "permutes_roots": true,
+  "8v_to_8c": true,
+  "8c_to_8s": true,
+  "8s_to_8v": true
+ },
+ "magic": [
+  [
+   {
+    "a": "R",
+    "b": "R",
+    "name": "su(2)",
+    "dim": 3,
+    "tri_a": 0,
+    "tri_b": 0,
+    "prod": 3
+   },
+   {
+    "a": "R",
+    "b": "C",
+    "name": "su(3)",
+    "dim": 8,
+    "tri_a": 0,
+    "tri_b": 2,
+    "prod": 6
+   },
+   {
+    "a": "R",
+    "b": "H",
+    "name": "sp(3)",
+    "dim": 21,
+    "tri_a": 0,
+    "tri_b": 9,
+    "prod": 12
+   },
+   {
+    "a": "R",
+    "b": "O",
+    "name": "f4",
+    "dim": 52,
+    "tri_a": 0,
+    "tri_b": 28,
+    "prod": 24
+   },
+   {
+    "a": "R",
+    "b": "C'",
+    "name": "sl(3)",
+    "dim": 8,
+    "tri_a": 0,
+    "tri_b": 2,
+    "prod": 6
+   },
+   {
+    "a": "R",
+    "b": "H'",
+    "name": "sp(6,R)",
+    "dim": 21,
+    "tri_a": 0,
+    "tri_b": 9,
+    "prod": 12
+   },
+   {
+    "a": "R",
+    "b": "O'",
+    "name": "f4(4)",
+    "dim": 52,
+    "tri_a": 0,
+    "tri_b": 28,
+    "prod": 24
+   }
+  ],
+  [
+   {
+    "a": "C",
+    "b": "R",
+    "name": "su(3)",
+    "dim": 8,
+    "tri_a": 2,
+    "tri_b": 0,
+    "prod": 6
+   },
+   {
+    "a": "C",
+    "b": "C",
+    "name": "2 su(3)",
+    "dim": 16,
+    "tri_a": 2,
+    "tri_b": 2,
+    "prod": 12
+   },
+   {
+    "a": "C",
+    "b": "H",
+    "name": "su(6)",
+    "dim": 35,
+    "tri_a": 2,
+    "tri_b": 9,
+    "prod": 24
+   },
+   {
+    "a": "C",
+    "b": "O",
+    "name": "e6",
+    "dim": 78,
+    "tri_a": 2,
+    "tri_b": 28,
+    "prod": 48
+   },
+   {
+    "a": "C",
+    "b": "C'",
+    "name": "sl(3,C)",
+    "dim": 16,
+    "tri_a": 2,
+    "tri_b": 2,
+    "prod": 12
+   },
+   {
+    "a": "C",
+    "b": "H'",
+    "name": "su(3,3)",
+    "dim": 35,
+    "tri_a": 2,
+    "tri_b": 9,
+    "prod": 24
+   },
+   {
+    "a": "C",
+    "b": "O'",
+    "name": "e6(2)",
+    "dim": 78,
+    "tri_a": 2,
+    "tri_b": 28,
+    "prod": 48
+   }
+  ],
+  [
+   {
+    "a": "H",
+    "b": "R",
+    "name": "sp(3)",
+    "dim": 21,
+    "tri_a": 9,
+    "tri_b": 0,
+    "prod": 12
+   },
+   {
+    "a": "H",
+    "b": "C",
+    "name": "su(6)",
+    "dim": 35,
+    "tri_a": 9,
+    "tri_b": 2,
+    "prod": 24
+   },
+   {
+    "a": "H",
+    "b": "H",
+    "name": "so(12)",
+    "dim": 66,
+    "tri_a": 9,
+    "tri_b": 9,
+    "prod": 48
+   },
+   {
+    "a": "H",
+    "b": "O",
+    "name": "e7",
+    "dim": 133,
+    "tri_a": 9,
+    "tri_b": 28,
+    "prod": 96
+   },
+   {
+    "a": "H",
+    "b": "C'",
+    "name": "sl(3,H)",
+    "dim": 35,
+    "tri_a": 9,
+    "tri_b": 2,
+    "prod": 24
+   },
+   {
+    "a": "H",
+    "b": "H'",
+    "name": "sp(6,H)",
+    "dim": 66,
+    "tri_a": 9,
+    "tri_b": 9,
+    "prod": 48
+   },
+   {
+    "a": "H",
+    "b": "O'",
+    "name": "e7(-5)",
+    "dim": 133,
+    "tri_a": 9,
+    "tri_b": 28,
+    "prod": 96
+   }
+  ],
+  [
+   {
+    "a": "O",
+    "b": "R",
+    "name": "f4",
+    "dim": 52,
+    "tri_a": 28,
+    "tri_b": 0,
+    "prod": 24
+   },
+   {
+    "a": "O",
+    "b": "C",
+    "name": "e6",
+    "dim": 78,
+    "tri_a": 28,
+    "tri_b": 2,
+    "prod": 48
+   },
+   {
+    "a": "O",
+    "b": "H",
+    "name": "e7",
+    "dim": 133,
+    "tri_a": 28,
+    "tri_b": 9,
+    "prod": 96
+   },
+   {
+    "a": "O",
+    "b": "O",
+    "name": "e8",
+    "dim": 248,
+    "tri_a": 28,
+    "tri_b": 28,
+    "prod": 192
+   },
+   {
+    "a": "O",
+    "b": "C'",
+    "name": "e6(-26)",
+    "dim": 78,
+    "tri_a": 28,
+    "tri_b": 2,
+    "prod": 48
+   },
+   {
+    "a": "O",
+    "b": "H'",
+    "name": "e7(-25)",
+    "dim": 133,
+    "tri_a": 28,
+    "tri_b": 9,
+    "prod": 96
+   },
+   {
+    "a": "O",
+    "b": "O'",
+    "name": "e8(-24)",
+    "dim": 248,
+    "tri_a": 28,
+    "tri_b": 28,
+    "prod": 192
+   }
+  ],
+  [
+   {
+    "a": "C'",
+    "b": "R",
+    "name": "sl(3)",
+    "dim": 8,
+    "tri_a": 2,
+    "tri_b": 0,
+    "prod": 6
+   },
+   {
+    "a": "C'",
+    "b": "C",
+    "name": "sl(3,C)",
+    "dim": 16,
+    "tri_a": 2,
+    "tri_b": 2,
+    "prod": 12
+   },
+   {
+    "a": "C'",
+    "b": "H",
+    "name": "sl(3,H)",
+    "dim": 35,
+    "tri_a": 2,
+    "tri_b": 9,
+    "prod": 24
+   },
+   {
+    "a": "C'",
+    "b": "O",
+    "name": "e6(-26)",
+    "dim": 78,
+    "tri_a": 2,
+    "tri_b": 28,
+    "prod": 48
+   },
+   {
+    "a": "C'",
+    "b": "C'",
+    "name": "2 sl(3)",
+    "dim": 16,
+    "tri_a": 2,
+    "tri_b": 2,
+    "prod": 12
+   },
+   {
+    "a": "C'",
+    "b": "H'",
+    "name": "sl(6,R)",
+    "dim": 35,
+    "tri_a": 2,
+    "tri_b": 9,
+    "prod": 24
+   },
+   {
+    "a": "C'",
+    "b": "O'",
+    "name": "e6(6)",
+    "dim": 78,
+    "tri_a": 2,
+    "tri_b": 28,
+    "prod": 48
+   }
+  ],
+  [
+   {
+    "a": "H'",
+    "b": "R",
+    "name": "sp(6,R)",
+    "dim": 21,
+    "tri_a": 9,
+    "tri_b": 0,
+    "prod": 12
+   },
+   {
+    "a": "H'",
+    "b": "C",
+    "name": "su(3,3)",
+    "dim": 35,
+    "tri_a": 9,
+    "tri_b": 2,
+    "prod": 24
+   },
+   {
+    "a": "H'",
+    "b": "H",
+    "name": "sp(6,H)",
+    "dim": 66,
+    "tri_a": 9,
+    "tri_b": 9,
+    "prod": 48
+   },
+   {
+    "a": "H'",
+    "b": "O",
+    "name": "e7(-25)",
+    "dim": 133,
+    "tri_a": 9,
+    "tri_b": 28,
+    "prod": 96
+   },
+   {
+    "a": "H'",
+    "b": "C'",
+    "name": "sl(6,R)",
+    "dim": 35,
+    "tri_a": 9,
+    "tri_b": 2,
+    "prod": 24
+   },
+   {
+    "a": "H'",
+    "b": "H'",
+    "name": "so(6,6)",
+    "dim": 66,
+    "tri_a": 9,
+    "tri_b": 9,
+    "prod": 48
+   },
+   {
+    "a": "H'",
+    "b": "O'",
+    "name": "e7(7)",
+    "dim": 133,
+    "tri_a": 9,
+    "tri_b": 28,
+    "prod": 96
+   }
+  ],
+  [
+   {
+    "a": "O'",
+    "b": "R",
+    "name": "f4(4)",
+    "dim": 52,
+    "tri_a": 28,
+    "tri_b": 0,
+    "prod": 24
+   },
+   {
+    "a": "O'",
+    "b": "C",
+    "name": "e6(2)",
+    "dim": 78,
+    "tri_a": 28,
+    "tri_b": 2,
+    "prod": 48
+   },
+   {
+    "a": "O'",
+    "b": "H",
+    "name": "e7(-5)",
+    "dim": 133,
+    "tri_a": 28,
+    "tri_b": 9,
+    "prod": 96
+   },
+   {
+    "a": "O'",
+    "b": "O",
+    "name": "e8(-24)",
+    "dim": 248,
+    "tri_a": 28,
+    "tri_b": 28,
+    "prod": 192
+   },
+   {
+    "a": "O'",
+    "b": "C'",
+    "name": "e6(6)",
+    "dim": 78,
+    "tri_a": 28,
+    "tri_b": 2,
+    "prod": 48
+   },
+   {
+    "a": "O'",
+    "b": "H'",
+    "name": "e7(7)",
+    "dim": 133,
+    "tri_a": 28,
+    "tri_b": 9,
+    "prod": 96
+   },
+   {
+    "a": "O'",
+    "b": "O'",
+    "name": "e8(8)",
+    "dim": 248,
+    "tri_a": 28,
+    "tri_b": 28,
+    "prod": 192
+   }
+  ]
+ ],
+ "hero_edges": 6720,
+ "data_kb": 122,
+ "triality_cyclic": {
+  "trials": 4000,
+  "worst_gap": 0
+ },
+ "reflection": {
+  "exact_cases": 1920,
+  "failures": 0,
+  "random_units": 3000,
+  "worst_miss": 2.1316282072803006e-14
+ },
+ "tri_dims": {
+  "R": {
+   "tri": 0,
+   "dim": 1,
+   "algebra": "su(2)",
+   "total": 3
+  },
+  "C": {
+   "tri": 2,
+   "dim": 2,
+   "algebra": "su(3)",
+   "total": 8
+  },
+  "H": {
+   "tri": 9,
+   "dim": 4,
+   "algebra": "sp(3)",
+   "total": 21
+  },
+  "O": {
+   "tri": 28,
+   "dim": 8,
+   "algebra": "f4",
+   "total": 52
+  },
+  "C'": {
+   "tri": 2,
+   "dim": 2,
+   "algebra": "sl(3)",
+   "total": 8
+  },
+  "H'": {
+   "tri": 9,
+   "dim": 4,
+   "algebra": "sp(6,R)",
+   "total": 21
+  },
+  "O'": {
+   "tri": 28,
+   "dim": 8,
+   "algebra": "f4(4)",
+   "total": 52
+  }
+ },
+ "eigen": [
+  {
+   "g": "su(3)",
+   "total": 8,
+   "fixed": "u(1) + u(1)",
+   "fixed_dim": 2,
+   "moving": "1 + 1 + 1",
+   "moving_dim": 3
+  },
+  {
+   "g": "sp(3)",
+   "total": 21,
+   "fixed": "so(4) + u(1)",
+   "fixed_dim": 7,
+   "moving": "3 + 4",
+   "moving_dim": 7
+  },
+  {
+   "g": "f4",
+   "total": 52,
+   "fixed": "so(7) + u(1)",
+   "fixed_dim": 22,
+   "moving": "7 + 8",
+   "moving_dim": 15
+  },
+  {
+   "g": "e6",
+   "total": 78,
+   "fixed": "so(8) + u(1) + u(1)",
+   "fixed_dim": 30,
+   "moving": "8v + 8s+ + 8s-",
+   "moving_dim": 24
+  },
+  {
+   "g": "e7",
+   "total": 133,
+   "fixed": "so(10) + su(2) + u(1)",
+   "fixed_dim": 49,
+   "moving": "10 + 2x16",
+   "moving_dim": 42
+  },
+  {
+   "g": "e8",
+   "total": 248,
+   "fixed": "so(14) + u(1)",
+   "fixed_dim": 92,
+   "moving": "14 + 64",
+   "moving_dim": 78
+  }
+ ],
+ "quaternion_cycle": {
+  "images": [
+   [
+    "0",
+    "0",
+    "1",
+    "0"
+   ],
+   [
+    "0",
+    "0",
+    "0",
+    "1"
+   ],
+   [
+    "0",
+    "1",
+    "0",
+    "0"
+   ]
+  ],
+  "cube": [
+   "1",
+   "0",
+   "0",
+   "0"
+  ]
+ },
+ "checks": {
+  "algebra": {
+   "total": 99,
+   "failures": 0,
+   "lines": [
+    "ok    R: alternative",
+    "ok    R: |xy| = |x||y|",
+    "ok    R: e0 is the unit",
+    "ok    C: alternative",
+    "ok    C: |xy| = |x||y|",
+    "ok    C: e0 is the unit",
+    "ok    H: alternative",
+    "ok    H: |xy| = |x||y|",
+    "ok    H: e0 is the unit",
+    "ok    O: alternative",
+    "ok    O: |xy| = |x||y|",
+    "ok    O: e0 is the unit",
+    "ok    C': alternative",
+    "ok    C': |xy| = |x||y|",
+    "ok    C': e0 is the unit",
+    "ok    H': alternative",
+    "ok    H': |xy| = |x||y|",
+    "ok    H': e0 is the unit",
+    "ok    O': alternative",
+    "ok    O': |xy| = |x||y|",
+    "ok    O': e0 is the unit",
+    "ok    O: composition holds on 800 random pairs",
+    "ok    S: composition fails past dimension 8",
+    "ok    S: a pair of nonzero sedenions multiplying to zero",
+    "ok    O: 7 lines in the table",
+    "ok    O: the seven lines cover the seven imaginary units",
+    "ok    O: each imaginary unit lies on three lines",
+    "ok    C: T(v,psi,chi) is cyclic",
+    "ok    H: T(v,psi,chi) is cyclic",
+    "ok    O: T(v,psi,chi) is cyclic",
+    "ok    C': T(v,psi,chi) is cyclic",
+    "ok    H': T(v,psi,chi) is cyclic",
+    "ok    O': T(v,psi,chi) is cyclic",
+    "ok    O: a reflection flips the sign of T (960 exact cases)",
+    "ok    O: and on 1500 random unit octonions, worst miss 2.8e-14",
+    "ok    H: t cycles e1 -> e2 -> e3 -> e1",
+    "ok    H: t^3 = 1",
+    "ok    su(3,R) = tri(R) + 3x1 = 3 = su(2)",
+    "ok    su(3,C) = tri(C) + 3x2 = 8 = su(3)",
+    "ok    su(3,H) = tri(H) + 3x4 = 21 = sp(3)",
+    "ok    su(3,O) = tri(O) + 3x8 = 52 = f4",
+    "ok    su(3,C') = tri(C') + 3x2 = 8 = sl(3)",
+    "ok    su(3,H') = tri(H') + 3x4 = 21 = sp(6,R)",
+    "ok    su(3,O') = tri(O') + 3x8 = 52 = f4(4)",
+    "ok    L(R,R) = 0+0+3 = 3 = su(2)",
+    "ok    L(R,C) = 0+2+6 = 8 = su(3)",
+    "ok    L(R,H) = 0+9+12 = 21 = sp(3)",
+    "ok    L(R,O) = 0+28+24 = 52 = f4",
+    "ok    L(R,C') = 0+2+6 = 8 = sl(3)",
+    "ok    L(R,H') = 0+9+12 = 21 = sp(6,R)",
+    "ok    L(R,O') = 0+28+24 = 52 = f4(4)",
+    "ok    L(C,R) = 2+0+6 = 8 = su(3)",
+    "ok    L(C,C) = 2+2+12 = 16 = 2 su(3)",
+    "ok    L(C,H) = 2+9+24 = 35 = su(6)",
+    "ok    L(C,O) = 2+28+48 = 78 = e6",
+    "ok    L(C,C') = 2+2+12 = 16 = sl(3,C)",
+    "ok    L(C,H') = 2+9+24 = 35 = su(3,3)",
+    "ok    L(C,O') = 2+28+48 = 78 = e6(2)",
+    "ok    L(H,R) = 9+0+12 = 21 = sp(3)",
+    "ok    L(H,C) = 9+2+24 = 35 = su(6)",
+    "ok    L(H,H) = 9+9+48 = 66 = so(12)",
+    "ok    L(H,O) = 9+28+96 = 133 = e7",
+    "ok    L(H,C') = 9+2+24 = 35 = sl(3,H)",
+    "ok    L(H,H') = 9+9+48 = 66 = sp(6,H)",
+    "ok    L(H,O') = 9+28+96 = 133 = e7(-5)",
+    "ok    L(O,R) = 28+0+24 = 52 = f4",
+    "ok    L(O,C) = 28+2+48 = 78 = e6",
+    "ok    L(O,H) = 28+9+96 = 133 = e7",
+    "ok    L(O,O) = 28+28+192 = 248 = e8",
+    "ok    L(O,C') = 28+2+48 = 78 = e6(-26)",
+    "ok    L(O,H') = 28+9+96 = 133 = e7(-25)",
+    "ok    L(O,O') = 28+28+192 = 248 = e8(-24)",
+    "ok    L(C',R) = 2+0+6 = 8 = sl(3)",
+    "ok    L(C',C) = 2+2+12 = 16 = sl(3,C)",
+    "ok    L(C',H) = 2+9+24 = 35 = sl(3,H)",
+    "ok    L(C',O) = 2+28+48 = 78 = e6(-26)",
+    "ok    L(C',C') = 2+2+12 = 16 = 2 sl(3)",
+    "ok    L(C',H') = 2+9+24 = 35 = sl(6,R)",
+    "ok    L(C',O') = 2+28+48 = 78 = e6(6)",
+    "ok    L(H',R) = 9+0+12 = 21 = sp(6,R)",
+    "ok    L(H',C) = 9+2+24 = 35 = su(3,3)",
+    "ok    L(H',H) = 9+9+48 = 66 = sp(6,H)",
+    "ok    L(H',O) = 9+28+96 = 133 = e7(-25)",
+    "ok    L(H',C') = 9+2+24 = 35 = sl(6,R)",
+    "ok    L(H',H') = 9+9+48 = 66 = so(6,6)",
+    "ok    L(H',O') = 9+28+96 = 133 = e7(7)",
+    "ok    L(O',R) = 28+0+24 = 52 = f4(4)",
+    "ok    L(O',C) = 28+2+48 = 78 = e6(2)",
+    "ok    L(O',H) = 28+9+96 = 133 = e7(-5)",
+    "ok    L(O',O) = 28+28+192 = 248 = e8(-24)",
+    "ok    L(O',C') = 28+2+48 = 78 = e6(6)",
+    "ok    L(O',H') = 28+9+96 = 133 = e7(7)",
+    "ok    L(O',O') = 28+28+192 = 248 = e8(8)",
+    "ok    su(3): 2 + 2 x 3 = 8",
+    "ok    sp(3): 7 + 2 x 7 = 21",
+    "ok    f4: 22 + 2 x 15 = 52",
+    "ok    e6: 30 + 2 x 24 = 78",
+    "ok    e7: 49 + 2 x 42 = 133",
+    "ok    e8: 92 + 2 x 78 = 248"
+   ]
+  },
+  "roots": {
+   "total": 40,
+   "failures": 0,
+   "lines": [
+    "ok    G2: 12 roots",
+    "ok    G2: Coxeter number 6",
+    "ok    G2: rings of 6, 6 on 2 circles",
+    "ok    G2: 2 simple roots, rank 2",
+    "ok    G2: dim = 12 roots + rank 2 = 14",
+    "ok    D4: 24 roots",
+    "ok    D4: Coxeter number 6",
+    "ok    D4: rings of 18, 6 on 2 circles",
+    "ok    D4: 4 simple roots, rank 4",
+    "ok    D4: dim = 24 roots + rank 4 = 28",
+    "ok    F4: 48 roots",
+    "ok    F4: Coxeter number 12",
+    "ok    F4: rings of 12, 12, 12, 12 on 4 circles",
+    "ok    F4: 4 simple roots, rank 4",
+    "ok    F4: dim = 48 roots + rank 4 = 52",
+    "ok    E6: 72 roots",
+    "ok    E6: Coxeter number 12",
+    "ok    E6: rings of 24, 12, 24, 12 on 4 circles",
+    "ok    E6: 6 simple roots, rank 6",
+    "ok    E6: dim = 72 roots + rank 6 = 78",
+    "ok    E7: 126 roots",
+    "ok    E7: Coxeter number 18",
+    "ok    E7: rings of 18, 18, 18, 18, 18, 18, 18 on 7 circles",
+    "ok    E7: 7 simple roots, rank 7",
+    "ok    E7: dim = 126 roots + rank 7 = 133",
+    "ok    E8: 240 roots",
+    "ok    E8: Coxeter number 30",
+    "ok    E8: rings of 30, 30, 30, 30, 30, 30, 30, 30 on 8 circles",
+    "ok    E8: 8 simple roots, rank 8",
+    "ok    E8: dim = 240 roots + rank 8 = 248",
+    "ok    e8: a triality split of 84 + 78 + 78 roots",
+    "ok    e8: the fixed 84 roots have rank 7 \u2014 so(14), and 84 + 8 = 92 with the Cartan",
+    "ok    e8: the split respects brackets on all 13440 root sums",
+    "ok    e8: 112 + 8 = 120 = so(16), and 128 = one spinor",
+    "ok    D4 triality: orthogonal",
+    "ok    D4 triality: order3",
+    "ok    D4 triality: permutes_roots",
+    "ok    D4 triality: 8v_to_8c",
+    "ok    D4 triality: 8c_to_8s",
+    "ok    D4 triality: 8s_to_8v"
+   ]
+  },
+  "total": 139,
+  "failures": 0
+ }
+}

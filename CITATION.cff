@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "Exceptional Magic: the division algebras, triality, the magic square and E8, computed and drawn"
+message: "If you use these figures, data or text, cite as below and keep the credit line. Cite the paper it reads separately: Lisi, A. G. (2026), Division Algebras, Triality, and Exceptional Magic, arXiv:2609.12112."
+type: software
+authors:
+  - name: "Nan"
+    website: "https://hongdam.net"
+repository-code: "https://github.com/NaNoBotCo/exceptional-magic"
+url: "https://nanobotco.github.io/exceptional-magic/"
+license: CC-BY-4.0
+date-released: "2026-09-23"
+keywords:
+  - octonions
+  - division algebras
+  - triality
+  - magic square
+  - exceptional Lie algebras
+  - E8
+  - root systems
+  - Coxeter plane
+references:
+  - type: article
+    authors:
+      - family-names: Lisi
+        given-names: A. Garrett
+    title: "Division Algebras, Triality, and Exceptional Magic"
+    year: 2026
+    url: "https://arxiv.org/abs/2609.12112"

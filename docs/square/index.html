@@ -1,0 +1,234 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Square — forty-nine boxes, one formula</title>
+<meta name="description" content="The Freudenthal-Tits magic square, every dimension computed from tri(A) + tri(B) + 3 dim A dim B and checked against the algebra it names.">
+<link rel="canonical" href="https://nanobotco.github.io/exceptional-magic/square/">
+<meta property="og:title" content="The Square — forty-nine boxes, one formula">
+<meta property="og:description" content="The Freudenthal-Tits magic square, every dimension computed from tri(A) + tri(B) + 3 dim A dim B and checked against the algebra it names.">
+<meta property="og:image" content="https://nanobotco.github.io/exceptional-magic/img/card.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/exceptional-magic/icon.svg" type="image/svg+xml">
+<style>
+:root{
+ --bg:#0a0a10;--bg2:#0f0f18;--panel:#14141f;--ink:#f2ede3;--mute:#9d9689;--line:#2c2c3a;
+ --chip:#1b1b28;--c0:#ffc247;--c1:#5fd3c6;--c2:#ff7ab6;--violet:#b79cff;--focus:#ffc247;
+ --display:"Avenir Next Condensed","Arial Narrow",Impact,system-ui,sans-serif;
+ --body:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+ color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{font-size:19px;scroll-behavior:smooth;background:var(--bg)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.62;
+ -webkit-text-size-adjust:100%}
+a{color:var(--c0);text-decoration-thickness:.08em;text-underline-offset:.18em}
+a:hover{color:#ffd98a}
+a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible,input:focus-visible{
+ outline:3px solid var(--focus);outline-offset:2px;border-radius:5px}
+img,canvas,svg{max-width:100%}img{height:auto}
+.sr{position:absolute;left:-999px;top:0;background:var(--c0);color:#000;padding:.4rem .8rem;z-index:99}
+.sr:focus{left:.5rem;top:.5rem}
+
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30;
+ background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px)}
+header.top .in{max-width:72rem;margin:0 auto;padding:.5rem 1rem;display:flex;gap:.4rem 1.1rem;
+ align-items:center;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:.03em;
+ text-transform:uppercase;text-decoration:none;color:var(--ink);white-space:nowrap;display:flex;
+ align-items:center;gap:.5rem}
+.brand i{width:.85rem;height:.85rem;border-radius:50%;background:var(--c0);display:inline-block;
+ box-shadow:0 0 0 3px rgba(255,194,71,.18),6px -6px 0 -2px var(--c1),-6px 6px 0 -2px var(--c2)}
+header.top nav{display:flex;gap:.1rem .8rem;flex-wrap:wrap;font-size:.72rem;text-transform:uppercase;
+ letter-spacing:.08em;font-weight:700}
+header.top nav a{text-decoration:none;color:var(--mute);padding:.15rem 0}
+header.top nav a:hover,header.top nav a[aria-current]{color:var(--ink);box-shadow:inset 0 -3px 0 var(--c0)}
+main{max-width:72rem;margin:0 auto;padding:1rem 1rem 5rem}
+footer.bot{border-top:1px solid var(--line);margin-top:3rem;background:var(--bg2)}
+footer.bot .in{max-width:72rem;margin:0 auto;padding:1.4rem 1rem 3rem;font-size:.8rem;color:var(--mute)}
+footer.bot a{color:var(--mute)}footer.bot p{max-width:none}
+.fleet{margin:.6rem 0 0;line-height:1.9}.fleet a{margin-right:.55rem;white-space:nowrap}
+.support{margin:.45rem 0 0}.support a{margin-right:.5rem}
+
+h1{font-family:var(--display);font-size:clamp(2.4rem,7.5vw,5rem);line-height:.94;margin:.3rem 0 .4rem;
+ font-weight:800;letter-spacing:-.005em;text-transform:uppercase}
+h1 .kind{display:block;font-size:clamp(.6rem,1.5vw,.72rem);color:var(--c0);letter-spacing:.34em;
+ margin-bottom:.55rem;font-weight:800}
+h2{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,2rem);margin:2.6rem 0 .6rem;font-weight:800;
+ text-transform:uppercase;border-bottom:2px solid var(--line);padding-bottom:.25rem}
+h2 small{font-family:var(--body);font-size:.55em;color:var(--mute);text-transform:none;
+ letter-spacing:0;font-weight:400;margin-left:.6rem}
+h3{font-family:var(--display);font-size:1.2rem;margin:1.7rem 0 .3rem;font-weight:800;text-transform:uppercase}
+.lede{font-size:clamp(1.12rem,2.4vw,1.35rem);max-width:44rem;margin:.5rem 0 1.1rem}
+.mute{color:var(--mute)}.small{font-size:.82rem}
+p{margin:.65rem 0;max-width:44rem}
+.prose p,.prose ul,.prose ol{max-width:44rem}
+.prose li{margin:.35rem 0}
+.prose strong{color:var(--c0);font-weight:700}
+blockquote{margin:1rem 0;padding:.6rem 0 .6rem 1rem;border-left:3px solid var(--c1);color:var(--ink);
+ max-width:44rem;font-style:normal}
+blockquote cite{display:block;margin-top:.4rem;color:var(--mute);font-size:.82rem;font-style:normal}
+
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin:1rem 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem;
+ text-decoration:none;color:var(--ink);display:block}
+a.card:hover{border-color:var(--c0)}
+.card h3{margin:.1rem 0 .3rem}
+.card p{margin:.2rem 0;font-size:.88rem;color:var(--mute)}
+.fig{margin:1.6rem 0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:.7rem}
+.fig img{display:block;margin:0 auto;border-radius:6px}
+.fig figcaption{color:var(--mute);font-size:.82rem;margin:.6rem .2rem 0;max-width:46rem}
+.fig.plain{background:none;border:none;padding:0}
+.hero{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:.6rem 0 1.4rem}
+.hero img{display:block;width:100%}
+
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.88rem}
+th,td{text-align:left;padding:.42rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mute);font-weight:700;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+.wrap{overflow-x:auto}
+code,kbd{font-family:var(--mono);font-size:.86em;background:var(--chip);padding:.1rem .3rem;border-radius:4px}
+pre{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem 1rem;
+ overflow-x:auto;font-size:.82rem}
+pre code{background:none;padding:0}
+.eq{font-family:var(--mono);background:var(--panel);border-left:3px solid var(--c0);padding:.7rem 1rem;
+ margin:1rem 0;overflow-x:auto;font-size:.92rem;max-width:44rem}
+.eq b{color:var(--c0);font-weight:600}
+.cite{font-size:.78em;color:var(--c1);text-decoration:none;border-bottom:1px dotted var(--c1);
+ white-space:nowrap;margin-left:.2em}
+.cite:hover{color:var(--c1)}
+.tag{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:999px;
+ padding:.1rem .6rem;font-size:.72rem;color:var(--mute);margin:0 .25rem .3rem 0}
+.tag.c0{border-color:var(--c0);color:var(--c0)}
+.tag.c1{border-color:var(--c1);color:var(--c1)}
+.tag.c2{border-color:var(--c2);color:var(--c2)}
+
+.tool{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1rem;margin:1.4rem 0}
+.tool h3{margin-top:0}
+.tool .row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.5rem 0}
+.tool label{font-size:.8rem;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+button,select,input[type=text]{font:inherit;font-size:.9rem;background:var(--chip);color:var(--ink);
+ border:1px solid var(--line);border-radius:7px;padding:.35rem .7rem;cursor:pointer}
+button:hover,select:hover{border-color:var(--c0)}
+button.go{background:var(--c0);color:#0a0a10;border-color:var(--c0);font-weight:700}
+.out{font-family:var(--mono);font-size:.9rem;background:#0b0b12;border:1px solid var(--line);
+ border-radius:8px;padding:.7rem .9rem;margin:.6rem 0 0;overflow-x:auto;line-height:1.8}
+.out .k{color:var(--mute)}
+.out .v{color:var(--c1)}
+.out .bad{color:var(--c2)}
+.out .good{color:var(--c0)}
+.units{display:flex;gap:.3rem;flex-wrap:wrap}
+.units button{min-width:2.9rem;text-align:center;font-family:var(--mono)}
+.units button[aria-pressed=true]{background:var(--c0);color:#0a0a10;border-color:var(--c0);font-weight:700}
+.units button.b[aria-pressed=true]{background:var(--c1);border-color:var(--c1)}
+canvas{display:block;margin:0 auto;max-width:100%;height:auto;touch-action:pan-y}
+
+.square{border-collapse:separate;border-spacing:3px;font-size:.78rem;width:auto;min-width:100%}
+.square td,.square th{border:none;padding:.4rem .3rem;text-align:center;border-radius:6px}
+.square td{background:var(--panel);border:1px solid var(--line)}
+.square td b{display:block;font-size:1.02rem;color:var(--ink)}
+.square td span{color:var(--mute);font-family:var(--mono);font-size:.72rem}
+.square td.big{border-color:var(--c0)}
+.square td.big b{color:var(--c0)}
+.square td.e7{border-color:var(--c1)}.square td.e7 b{color:var(--c1)}
+.square td.e6{border-color:var(--c2)}.square td.e6 b{color:var(--c2)}
+.square td.f4{border-color:var(--violet)}.square td.f4 b{color:var(--violet)}
+.square th{color:var(--mute)}
+
+ul.ticks{list-style:none;padding-left:0}
+ul.ticks li{padding-left:1.4rem;position:relative}
+ul.ticks li:before{content:"✓";position:absolute;left:0;color:var(--c1);font-weight:700}
+ul.checks{list-style:none;padding-left:0;font-family:var(--mono);font-size:.78rem;columns:2;
+ column-gap:2rem;max-width:none}
+ul.checks li{break-inside:avoid;color:var(--mute);margin:.15rem 0}
+ul.checks li b{color:var(--c1);font-weight:400}
+@media (max-width:48rem){ul.checks{columns:1}}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1rem;font-size:.86rem;max-width:44rem}
+.kv dt{color:var(--mute)}.kv dd{margin:0}
+.note{border:1px solid var(--line);border-left:3px solid var(--c2);background:var(--bg2);
+ border-radius:0 8px 8px 0;padding:.7rem 1rem;margin:1.2rem 0;font-size:.9rem;max-width:46rem}
+.note b{color:var(--c2)}
+.credit{border:1px solid var(--c1);border-radius:10px;padding:1rem 1.2rem;margin:1.6rem 0;
+ background:color-mix(in srgb,var(--c1) 6%,var(--panel));max-width:46rem}
+.credit a{color:var(--c1)}
+.credit h3{margin-top:0;color:var(--c1)}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.gallery a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+ padding:.6rem;text-decoration:none;color:var(--mute);font-size:.8rem}
+.gallery a:hover{border-color:var(--c0)}
+.gallery img{border-radius:6px;display:block;width:100%;background:var(--bg)}
+</style></head>
+<body data-base="/exceptional-magic/">
+<a class="sr" href="#main">Skip to the page</a>
+<header class="top"><div class="in">
+<a class="brand" href="/exceptional-magic/"><i></i>Exceptional <b>Magic</b></a>
+<nav aria-label="Sections"><a href="/exceptional-magic/numbers/">Numbers</a><a href="/exceptional-magic/wheel/">Wheel</a><a href="/exceptional-magic/triality/">Triality</a><a href="/exceptional-magic/square/" aria-current="page">Square</a><a href="/exceptional-magic/e8/">E8</a><a href="/exceptional-magic/physics/">Physics</a><a href="/exceptional-magic/checks/">Checks</a><a href="/exceptional-magic/gallery/">Gallery</a><a href="/exceptional-magic/credit/">Credit</a></nav></div></header>
+<main id="main"><h1><span class="kind">Forty-nine boxes, one rule</span>The Square</h1>
+<p class="lede">Put two division algebras together and a Lie algebra falls out. Do it for every
+pair and you get the magic square — which is magic because nobody ordered the exceptional
+algebras to show up in it, and there they all are.</p>
+
+<div class="prose">
+<p>A <strong>Lie algebra</strong> is the bookkeeping of a continuous symmetry: the list of
+independent ways to nudge something, and the rule for what happens when you nudge twice in
+different orders. Rotations in three dimensions give a three-dimensional one. Most of them come
+in four tidy families that run forever. Five do not: <code>g2</code>, <code>f4</code>,
+<code>e6</code>, <code>e7</code>, <code>e8</code>. Those five are the exceptional ones, and they
+exist because the octonions do.</p>
+<p>Freudenthal and Tits found the square in the sixties <span class="cite">H. Freudenthal 1964</span> <span class="cite">J. Tits 1966</span>.
+The construction is: take the triality algebra of 𝔸, the triality algebra of 𝔹, and three
+copies of 𝔸 ⊗ 𝔹 — one for the vector, one for each spinor.</p>
+<div class="eq">dim L(𝔸, 𝔹) = tri(𝔸) + tri(𝔹) + 3 · dim𝔸 · dim𝔹<div class="small mute" style="margin-top:.35rem">one line, forty-nine boxes. The small print under each box below is that sum for that box.</div></div>
+<p>Every dimension in the table is computed from that formula by <code>tools/algebra.py</code>
+and then checked against the known dimension of the algebra named in the box. All forty-nine
+agree.</p>
+</div>
+
+<h2>The square</h2>
+<div class="wrap"><table class="square"><tr><th></th><th>ℝ</th><th>ℂ</th><th>ℍ</th><th>𝕆</th><th>ℂ′</th><th>ℍ′</th><th>𝕆′</th></tr><tr><th>ℝ</th><td class=""><b>su(2)</b>3<br><span>0+0+3</span></td><td class=""><b>su(3)</b>8<br><span>0+2+6</span></td><td class=""><b>sp(3)</b>21<br><span>0+9+12</span></td><td class="f4"><b>f4</b>52<br><span>0+28+24</span></td><td class=""><b>sl(3)</b>8<br><span>0+2+6</span></td><td class=""><b>sp(6,R)</b>21<br><span>0+9+12</span></td><td class="f4"><b>f4(4)</b>52<br><span>0+28+24</span></td></tr><tr><th>ℂ</th><td class=""><b>su(3)</b>8<br><span>2+0+6</span></td><td class=""><b>2 su(3)</b>16<br><span>2+2+12</span></td><td class=""><b>su(6)</b>35<br><span>2+9+24</span></td><td class="e6"><b>e6</b>78<br><span>2+28+48</span></td><td class=""><b>sl(3,C)</b>16<br><span>2+2+12</span></td><td class=""><b>su(3,3)</b>35<br><span>2+9+24</span></td><td class="e6"><b>e6(2)</b>78<br><span>2+28+48</span></td></tr><tr><th>ℍ</th><td class=""><b>sp(3)</b>21<br><span>9+0+12</span></td><td class=""><b>su(6)</b>35<br><span>9+2+24</span></td><td class=""><b>so(12)</b>66<br><span>9+9+48</span></td><td class="e7"><b>e7</b>133<br><span>9+28+96</span></td><td class=""><b>sl(3,H)</b>35<br><span>9+2+24</span></td><td class=""><b>sp(6,H)</b>66<br><span>9+9+48</span></td><td class="e7"><b>e7(-5)</b>133<br><span>9+28+96</span></td></tr><tr><th>𝕆</th><td class="f4"><b>f4</b>52<br><span>28+0+24</span></td><td class="e6"><b>e6</b>78<br><span>28+2+48</span></td><td class="e7"><b>e7</b>133<br><span>28+9+96</span></td><td class="big"><b>e8</b>248<br><span>28+28+192</span></td><td class="e6"><b>e6(-26)</b>78<br><span>28+2+48</span></td><td class="e7"><b>e7(-25)</b>133<br><span>28+9+96</span></td><td class="big"><b>e8(-24)</b>248<br><span>28+28+192</span></td></tr><tr><th>ℂ′</th><td class=""><b>sl(3)</b>8<br><span>2+0+6</span></td><td class=""><b>sl(3,C)</b>16<br><span>2+2+12</span></td><td class=""><b>sl(3,H)</b>35<br><span>2+9+24</span></td><td class="e6"><b>e6(-26)</b>78<br><span>2+28+48</span></td><td class=""><b>2 sl(3)</b>16<br><span>2+2+12</span></td><td class=""><b>sl(6,R)</b>35<br><span>2+9+24</span></td><td class="e6"><b>e6(6)</b>78<br><span>2+28+48</span></td></tr><tr><th>ℍ′</th><td class=""><b>sp(6,R)</b>21<br><span>9+0+12</span></td><td class=""><b>su(3,3)</b>35<br><span>9+2+24</span></td><td class=""><b>sp(6,H)</b>66<br><span>9+9+48</span></td><td class="e7"><b>e7(-25)</b>133<br><span>9+28+96</span></td><td class=""><b>sl(6,R)</b>35<br><span>9+2+24</span></td><td class=""><b>so(6,6)</b>66<br><span>9+9+48</span></td><td class="e7"><b>e7(7)</b>133<br><span>9+28+96</span></td></tr><tr><th>𝕆′</th><td class="f4"><b>f4(4)</b>52<br><span>28+0+24</span></td><td class="e6"><b>e6(2)</b>78<br><span>28+2+48</span></td><td class="e7"><b>e7(-5)</b>133<br><span>28+9+96</span></td><td class="big"><b>e8(-24)</b>248<br><span>28+28+192</span></td><td class="e6"><b>e6(6)</b>78<br><span>28+2+48</span></td><td class="e7"><b>e7(7)</b>133<br><span>28+9+96</span></td><td class="big"><b>e8(8)</b>248<br><span>28+28+192</span></td></tr></table></div>
+<p class="small mute">Top-left quarter: the four division algebras, giving the compact real
+forms. The right and bottom bands are the split algebras, which give the other real forms of the
+same complex algebras — <code>e8</code> and <code>e8(8)</code> and <code>e8(−24)</code> are the
+same 248 dimensions with different signs in the metric <a class="cite" href="https://arxiv.org/abs/2609.12112" rel="noopener">Lisi 2026 §5</a>.</p>
+
+<figure class="fig "><img src="/exceptional-magic/img/magic.svg" alt="A seven by seven grid of Lie algebras, each box carrying a name, a dimension and the arithmetic behind it. E8 at 248 sits in the corner." loading="lazy" decoding="async"><figcaption>The same square as a figure, with the arithmetic under every box.</figcaption></figure>
+
+<h2>Reading the corners</h2>
+<div class="wrap"><table>
+<thead><tr><th>pair</th><th>sum</th><th class="n">dim</th><th>algebra</th><th>what it is</th></tr>
+</thead><tbody>
+<tr><td>ℝ × 𝕆</td><td class="n">0 + 28 + 24</td><td class="n">52</td><td><code>f4</code></td>
+<td>the symmetries of the octonion projective plane</td></tr>
+<tr><td>ℂ × 𝕆</td><td class="n">2 + 28 + 48</td><td class="n">78</td><td><code>e6</code></td>
+<td>big enough to hold the SO(10) grand unified theory and one generation of matter</td></tr>
+<tr><td>ℍ × 𝕆</td><td class="n">9 + 28 + 96</td><td class="n">133</td><td><code>e7</code></td>
+<td>where ℂ ⊗ ℍ ⊗ 𝕆 fermions land <span class="cite">G. M. Dixon 1994</span> <a class="cite" href="https://arxiv.org/abs/2210.10126" rel="noopener">N. Furey 2022</a></td></tr>
+<tr><td>𝕆 × 𝕆</td><td class="n">28 + 28 + 192</td><td class="n">248</td><td><code>e8</code></td>
+<td>the largest exceptional Lie algebra. There is no sixth.</td></tr>
+</tbody></table></div>
+
+<div class="prose">
+<p>Look down that column. 52, 78, 133, 248 — the whole exceptional series except
+<code>g2</code>, produced by one arithmetic rule from the octonions and one other algebra.
+<code>g2</code> is the odd one out because it is not in the square at all: it is the symmetry
+group <em>of</em> the octonions, the fourteen-dimensional set of ways to relabel them that
+leaves every product where it was <a class="cite" href="https://arxiv.org/abs/2609.12112" rel="noopener">Lisi 2026 §11</a>.</p>
+<p>And the square is symmetric, which it had no right to be. L(𝔸, 𝔹) and L(𝔹, 𝔸) are built
+differently and come out the same. That is the part that earns the name.</p>
+</div>
+</main>
+<footer class="bot"><div class="in">
+<p><b>Exceptional Magic</b> — Eight ways to multiply, and where they get you: the octonions, triality, the magic square and E8, drawn from the arithmetic and told plain.</p>
+<p>Text and figures Nan · hongdam.net · CC BY 4.0. Code MIT. Built 2026-09-23.
+Every figure was computed by <code>tools/figures.py</code> in
+<a href="https://github.com/NaNoBotCo/exceptional-magic">the repository</a>; none is traced from anyone's drawing.</p>
+<p>Reading <a href="https://arxiv.org/abs/2609.12112" rel="noopener">A. Garrett Lisi, Division Algebras, Triality, and Exceptional Magic</a>,
+arXiv:2609.12112v1 [math-ph], 10 September 2026, used under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener">CC BY-NC-ND 4.0</a>
+— quoted from, not reproduced.</p>
+<div class="fleet">More from NaNoBotCo: <a href="https://motdang.net/" title="city directory for Chiang Mai and Chiang Rai">Mot Dang</a> · <a href="https://nanobotco.github.io/mae-hong-son-loop/" title="motorcycling the 600 km loop out of Chiang Mai — curves counted, air measured">The Mae Hong Son Loop</a> · <a href="https://motdang.net/muay-thai/" title="the eight limbs, the thirty named techniques, the ceremony, and every gym on the map">Muay Thai</a> · <a href="https://motdang.net/roads/" title="the square of 1296, four rings, and what each one did to the city — counted from the map">Roads of Chiang Mai</a> · <a href="https://wichaa.net/" title="Lanna manuscripts, the amulet market, and the traditions around them">wichaa</a> · <a href="https://nanobotco.github.io/hand-poke/" title="28 traditions of marking skin by hand — the leg-tattoo zone of Burma, the Shan States and Lanna, counted">Hand Poke</a> · <a href="https://nanobotco.github.io/black-holes/" title="black holes modelled and drawn from the equations — generators, the past, present and future, the legends">Black Holes, Drawn</a> · <a href="https://nanobotco.github.io/quantum-computing/" title="the history and theory of quantum computing in plain words, with demos; refreshed weekly">Quantum Computing, plainly</a> · <a href="https://nanobotco.github.io/goin-fast/" title="a dirt-simple explainer about speed — twenty measured speeds from the ground under the house to light, and what each one costs">Goin&#x27; Fast</a> · <a href="https://nanobotco.github.io/three-body/" title="the mathematics of the three-body problem in plain words, with the orbits found rather than copied">The Three-Body Problem</a> · <a href="https://nanobotco.github.io/amulet-atlas/" title="amulets, charms and talismans worldwide">Amulet Atlas</a> · <a href="https://nanobotco.github.io/carolina-barbecue/" title="barbecue in North and South Carolina">Carolina Barbecue</a> · <a href="https://nanobotco.github.io/buffalo-wings/" title="the American chicken wing">Wing Country</a> · <a href="https://nanobotco.github.io/pink-box/" title="the American mom-and-pop donut shop">Pink Box</a> · <a href="https://nanobotco.github.io/basque-tables/" title="Basque dining rooms of California, Nevada and Idaho">Basque Tables</a> · <a href="https://nanobotco.github.io/pinot-noir/" title="pinot noir: the vine, the regions, the cellars">Pinot Country</a> · <a href="https://nanobotco.github.io/care-abroad/" title="treatment across borders, with published prices and their dates">Care Abroad</a> · <a href="https://nanobotco.github.io/thairoots/" title="a root dictionary of Thai, with a word decomposer">Thai Roots</a> · <a href="https://nanobotco.github.io/index/" title="every corpus, site and repository, counted">The index</a> · <a href="https://nanobotco.github.io/uptake/" title="a field manual on publishing for machines that copy">Uptake</a> · <a href="https://nanobotco.github.io/" title="the portal">NaNoBotCo</a> · <a href="https://hakfarang.net/" title="เรื่องเงิน วีซ่า และชีวิตกับแฟนฝรั่ง">ฮักฝรั่ง</a> · <a href="https://offrampt.net/" title="turning crypto into spendable local money, Thailand first">Offrampt</a></div>
+<div class="support">Contact: Nan · <a href="mailto:nan@motdang.net">nan@motdang.net</a> · Sponsor: <a href="https://www.patreon.com/nanobotco" rel="noopener" target="_blank">Patreon</a> · <a href="https://ko-fi.com/defiantchiangmai" rel="noopener" target="_blank">Ko-fi</a></div>
+<div class="support maker">Made by <a href="https://hongdam.net/" rel="noopener">Hongdam</a>, Chiang Rai.</div>
+</div></footer>
+<script src="/exceptional-magic/js/nav.js" defer></script>
+</body></html>
