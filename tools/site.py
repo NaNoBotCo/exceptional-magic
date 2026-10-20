@@ -16,6 +16,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fleet                                   # noqa: E402
+import ogcards  # noqa: E402
 from css import CSS                            # noqa: E402
 from sources import PAPER, SOURCES, BY_ID, url as src_url, cite_html   # noqa: E402
 
@@ -172,6 +173,8 @@ Every figure was computed by <code>tools/figures.py</code> in
 
 def write(p: Path, text: str):
     p.parent.mkdir(parents=True, exist_ok=True)
+    if p.suffix == ".html":
+        text = ogcards.apply(text, p.relative_to(SITE).as_posix(), SITE_URL)
     p.write_text(text, encoding="utf-8")
 
 
@@ -1051,6 +1054,7 @@ def main():
     if SITE.exists():
         shutil.rmtree(SITE)
     SITE.mkdir(parents=True)
+    ogcards.copy(ROOT, SITE)
     shutil.copytree(IMG, SITE / "img")
     shutil.copytree(BUILD / "data", SITE / "data")
     shutil.copytree(ROOT / "js", SITE / "js")
