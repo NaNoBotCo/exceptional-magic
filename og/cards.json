@@ -1,0 +1,38 @@
+{
+ "checks/": {
+  "alt": "Card: Checks, Exceptional Magic",
+  "image": "og/checks.jpg"
+ },
+ "credit/": {
+  "alt": "Card: Credit, Exceptional Magic",
+  "image": "og/credit.jpg"
+ },
+ "e8/": {
+  "alt": "Card: E8, The E8 shadow with each root coloured by which of three eigenspaces it falls in: 84 amber, 78 teal, 78 rose.",
+  "image": "og/e8.jpg"
+ },
+ "gallery/": {
+  "alt": "Card: Gallery, Two hundred and forty dots in eight rings, every dot joined to fifty-six others by faint lines, the whole thing turning about a dark centre with thirty-fold symmetry. The dots come in three colours: amber, teal and rose.",
+  "image": "og/gallery.jpg"
+ },
+ "numbers/": {
+  "alt": "Card: Numbers, Exceptional Magic",
+  "image": "og/numbers.jpg"
+ },
+ "physics/": {
+  "alt": "Card: Physics, Exceptional Magic",
+  "image": "og/physics.jpg"
+ },
+ "square/": {
+  "alt": "Card: The Square, Exceptional Magic",
+  "image": "og/square.jpg"
+ },
+ "triality/": {
+  "alt": "Card: Triality, Twenty-four dots in three colours with three-fold symmetry: a third of a turn carries each colour onto the next.",
+  "image": "og/triality.jpg"
+ },
+ "wheel/": {
+  "alt": "Card: The Wheel, Seven labelled circles at the corners, edge midpoints and centre of a triangle, joined by three sides, three medians and one inner circle, with arrows around each line.",
+  "image": "og/wheel.jpg"
+ }
+}
