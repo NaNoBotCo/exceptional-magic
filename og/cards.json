@@ -1,4 +1,8 @@
 {
+ "./": {
+  "alt": "Card: Exceptional Magic, a ring of coloured dots, the E8 root system, beside the title",
+  "image": "img/card.jpg"
+ },
  "checks/": {
   "alt": "Card: Checks, Exceptional Magic",
   "image": "og/checks.jpg"
